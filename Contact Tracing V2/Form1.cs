@@ -25,8 +25,8 @@ namespace Contact_Tracing_V2
 
             Application.Restart();
 
-            StreamWriter file = new StreamWriter(@"C:\Users\DELL LATITUDE\Desktop\Contact Tracing Kenneth\contacttrace.txt", true);
-            file.WriteLine("Date : " + dateTimePicker1);
+            StreamWriter file = new StreamWriter(@"C:\Users\DELL LATITUDE\Desktop\Contact Tracing new\contacttrace.txt", true);
+            file.WriteLine("Date : " + cmBoxmonth.Text + cmBoxday.Text + cmBoxyear);
             file.WriteLine("Name: " + txtbox1stname.Text + txtboxmi.Text + txtboxsurname.Text);
             file.WriteLine("Address: " + txtboxstreet.Text + txtboxbarangay.Text + txtboxcity.Text);
             file.WriteLine("Contact: " + txtboxphonenum.Text + txtboxemail.Text);

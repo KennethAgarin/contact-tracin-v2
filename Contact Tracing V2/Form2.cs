@@ -41,8 +41,23 @@ namespace Contact_Tracing_V2
                     dates.Add(datesdata);
                 }
             }
+            if (countDate == 0)
+            {
+                MessageBox.Show("No visitors on this date.");
+                reader.Close();
+            }
+            else
+            {
+                reader.Close();
+                StreamWriter file = new StreamWriter(@"C:\Users\DELL LATITUDE\Desktop\Contact Tracing new\contacttracevisitors.txt");
+                foreach (string datesdata in dates)
+                {
+                    file.WriteLine(datesdata);
+                }
+                MessageBox.Show("Found: " + countDate.ToString() + " data needed");
 
-               
+                file.Close();
+
 
             }
 

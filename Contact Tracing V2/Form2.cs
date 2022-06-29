@@ -58,6 +58,8 @@ namespace Contact_Tracing_V2
 
                 file.Close();
 
+                Form3 Form = new Form3();
+
 
             }
 

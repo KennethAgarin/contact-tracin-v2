@@ -17,7 +17,9 @@ namespace Contact_Tracing_V2
         {
             InitializeComponent();
 
-
+            StreamReader reader = new StreamReader(@"C:\Users\DELL LATITUDE\Desktop\Contact Tracing new\contacttracevisitors.txt");
+            string all = reader.ReadToEnd();
+            MessageBox.Show(all);
         }
         private void Form3_Load(object sender, EventArgs e)
         {

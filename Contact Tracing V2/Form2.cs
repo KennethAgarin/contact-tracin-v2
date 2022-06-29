@@ -25,21 +25,42 @@ namespace Contact_Tracing_V2
 
         private void btndisplay_Click(object sender, EventArgs e)
         {
-            string month = dateTimePicker1.Text;
-            string day = dateTimePicker1.Text;
-            string year = dateTimePicker1.Text;
+            StreamReader reader = new StreamReader(@"C:\Users\DELL LATITUDE\Desktop\Contact Tracing new\contacttrace.txt");
+            List<string> dates = new List<string>();
 
-            try
+            string InfoDate = datepickerform2.Text;
+            int countDate = 0;
+
+            while(!reader.EndOfStream)
             {
-                StreamReader Visitors = new StreamReader(@"C:\Users\DELL LATITUDE\Desktop\Contact Tracing new\" + (month) + " " + (day) + " " + (year) + "contacttrace.txt");
-                MessageBox.Show(Visitors.ReadToEnd());
-                Visitors.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("No visitors on this date.");
+                string datesdata = reader.ReadLine();
+                if (datesdata.Contains(InfoDate))
+                {
+                    countDate++;
+
+                    dates.Add(datesdata);
+                }
             }
 
+               
+
+            }
+
+        }
+
+        private void cmBoxyear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cmBoxday_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cmBoxmonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -26,11 +26,8 @@ namespace Contact_Tracing_V2
             Application.Restart();
 
             StreamWriter file = new StreamWriter(@"C:\Users\DELL LATITUDE\Desktop\Contact Tracing new\contacttrace.txt", true);
-            file.WriteLine("Date : " + cmBoxmonth.Text + cmBoxday.Text + cmBoxyear);
-            file.WriteLine("Name: " + txtbox1stname.Text + txtboxmi.Text + txtboxsurname.Text);
-            file.WriteLine("Address: " + txtboxstreet.Text + txtboxbarangay.Text + txtboxcity.Text);
-            file.WriteLine("Contact: " + txtboxphonenum.Text + txtboxemail.Text);
-            file.WriteLine("Temperature: " + txtboxtemp.Text);
+            file.WriteLine("Date : " + dateTimePicker1.Text + " " + "Name: " + txtbox1stname.Text + " " + txtboxmi.Text + " " + txtboxsurname.Text + " " + "Address: " + txtboxstreet.Text + " " + txtboxbarangay.Text + " " + txtboxcity.Text + " " + "Contact: " + txtboxphonenum.Text + " " + txtboxemail.Text + " " + "Temperature: " + " " + txtboxtemp.Text);
+            file.WriteLine(" ");
             file.Close();
         }
 
@@ -51,6 +48,21 @@ namespace Contact_Tracing_V2
             {
                 MessageBox.Show("Wrong password");
             }
+        }
+
+        private void cmBoxmonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmBoxday_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cmBoxyear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

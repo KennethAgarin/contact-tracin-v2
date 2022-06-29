@@ -61,9 +61,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Template = new System.Windows.Forms.PictureBox();
-            this.cmBoxmonth = new System.Windows.Forms.ComboBox();
-            this.cmBoxday = new System.Windows.Forms.ComboBox();
-            this.cmBoxyear = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Template)).BeginInit();
             this.SuspendLayout();
@@ -394,95 +392,22 @@
             this.Template.TabIndex = 39;
             this.Template.TabStop = false;
             // 
-            // cmBoxmonth
+            // dateTimePicker1
             // 
-            this.cmBoxmonth.AccessibleName = "";
-            this.cmBoxmonth.FormattingEnabled = true;
-            this.cmBoxmonth.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.cmBoxmonth.Location = new System.Drawing.Point(38, 67);
-            this.cmBoxmonth.Name = "cmBoxmonth";
-            this.cmBoxmonth.Size = new System.Drawing.Size(56, 21);
-            this.cmBoxmonth.TabIndex = 70;
-            this.cmBoxmonth.Text = "Month";
-            // 
-            // cmBoxday
-            // 
-            this.cmBoxday.AccessibleName = "";
-            this.cmBoxday.FormattingEnabled = true;
-            this.cmBoxday.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.cmBoxday.Location = new System.Drawing.Point(100, 67);
-            this.cmBoxday.Name = "cmBoxday";
-            this.cmBoxday.Size = new System.Drawing.Size(56, 21);
-            this.cmBoxday.TabIndex = 71;
-            this.cmBoxday.Text = "Day";
-            // 
-            // cmBoxyear
-            // 
-            this.cmBoxyear.AccessibleName = "";
-            this.cmBoxyear.FormattingEnabled = true;
-            this.cmBoxyear.Items.AddRange(new object[] {
-            "2020",
-            "2021",
-            "2022",
-            "2023",
-            "2024"});
-            this.cmBoxyear.Location = new System.Drawing.Point(166, 67);
-            this.cmBoxyear.Name = "cmBoxyear";
-            this.cmBoxyear.Size = new System.Drawing.Size(56, 21);
-            this.cmBoxyear.TabIndex = 72;
-            this.cmBoxyear.Text = "Year";
+            this.dateTimePicker1.CustomFormat = "mm-dd-yy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(41, 67);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(181, 20);
+            this.dateTimePicker1.TabIndex = 70;
+            this.dateTimePicker1.Value = new System.DateTime(2022, 6, 29, 12, 46, 36, 0);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 472);
-            this.Controls.Add(this.cmBoxyear);
-            this.Controls.Add(this.cmBoxday);
-            this.Controls.Add(this.cmBoxmonth);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.Adminbtn);
             this.Controls.Add(this.txtpas);
@@ -557,9 +482,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox Template;
-        private System.Windows.Forms.ComboBox cmBoxmonth;
-        private System.Windows.Forms.ComboBox cmBoxday;
-        private System.Windows.Forms.ComboBox cmBoxyear;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 

@@ -46,7 +46,7 @@ namespace Contact_Tracing_V2
             captureDevice = new VideoCaptureDevice(filterInfoCollection[cbDevice.SelectedIndex].MonikerString);
             captureDevice.NewFrame += CaptureDevice_NewFrame;
             captureDevice.Start();
-
+            timer1.Start();
         }
 
         private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
@@ -62,7 +62,15 @@ namespace Contact_Tracing_V2
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-          
+          BarcodeReader barcode = new BarcodeReader();
+          Result result = barcode.Decode((Bitmap)pbQRcode.Image);
+          if (result != null)
+          {
+                QRcodetxtbx.Text = result.ToString();
+                timer1.Stop();
+                if (captureDevice.IsRunning)
+                    captureDevice.Stop();
+          }
         }
     }
 }

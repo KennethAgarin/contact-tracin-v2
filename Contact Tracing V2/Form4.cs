@@ -56,7 +56,8 @@ namespace Contact_Tracing_V2
 
         private void Form4_FormClosing(object sender, FormClosingEventArgs e)
         {
-        
+            if (captureDevice.IsRunning)
+                captureDevice.Stop();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

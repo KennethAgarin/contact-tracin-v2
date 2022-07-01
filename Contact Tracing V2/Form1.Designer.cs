@@ -244,6 +244,7 @@
             this.txtbox1stname.Name = "txtbox1stname";
             this.txtbox1stname.Size = new System.Drawing.Size(162, 20);
             this.txtbox1stname.TabIndex = 52;
+            this.txtbox1stname.TextChanged += new System.EventHandler(this.txtbox1stname_TextChanged);
             // 
             // label12
             // 

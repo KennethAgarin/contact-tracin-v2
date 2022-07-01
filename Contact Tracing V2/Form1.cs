@@ -65,5 +65,10 @@ namespace Contact_Tracing_V2
         {
             
         }
+
+        private void txtbox1stname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

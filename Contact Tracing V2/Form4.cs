@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AForge.Video;
+using AForge;
 using AForge.Video.DirectShow;
 using ZXing;
+using System.IO;
+using ZXing.Aztec;
+using System.Drawing;
 
 namespace Contact_Tracing_V2
 {
@@ -46,7 +49,8 @@ namespace Contact_Tracing_V2
             captureDevice = new VideoCaptureDevice(filterInfoCollection[cbDevice.SelectedIndex].MonikerString);
             captureDevice.NewFrame += CaptureDevice_NewFrame;
             captureDevice.Start();
-            timer1.Start();
+
+           
         }
 
         private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
@@ -62,15 +66,30 @@ namespace Contact_Tracing_V2
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-          BarcodeReader barcode = new BarcodeReader();
-          Result result = barcode.Decode((Bitmap)pbQRcode.Image);
-          if (result != null)
-          {
+            if (pbQRcode.Image != null)
+            { 
+            BarcodeReader barcode = new BarcodeReader();
+            Result result = barcode.Decode((Bitmap)pbQRcode.Image);
+            if (result != null)
+            {
                 QRcodetxtbx.Text = result.ToString();
-                timer1.Stop();
+
                 if (captureDevice.IsRunning)
                     captureDevice.Stop();
-          }
+            }
+            }
+        }
+
+        private void generatebtn_Click(object sender, EventArgs e)
+        {
+            Form5 form = new Form5();
+            form.ShowDialog();
+
+        }
+
+        private void QRcodetxtbx_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

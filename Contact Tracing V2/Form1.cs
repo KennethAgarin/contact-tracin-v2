@@ -33,7 +33,8 @@ namespace Contact_Tracing_V2
 
         private void restartbtn_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+           Form4 Form = new Form4();
+            Form.ShowDialog();
         }
 
         private void Adminbtn_Click(object sender, EventArgs e)

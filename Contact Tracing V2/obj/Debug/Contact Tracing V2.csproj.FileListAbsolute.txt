@@ -11,3 +11,4 @@ C:\Users\DELL LATITUDE\Desktop\Contact Tracing new\Contact Tracing V2\obj\Debug\
 C:\Users\DELL LATITUDE\Desktop\Contact Tracing new\Contact Tracing V2\obj\Debug\Contact Tracing V2.exe
 C:\Users\DELL LATITUDE\Desktop\Contact Tracing new\Contact Tracing V2\obj\Debug\Contact Tracing V2.pdb
 C:\Users\DELL LATITUDE\Desktop\Contact Tracing new\Contact Tracing V2\obj\Debug\Contact_Tracing_V2.Form3.resources
+C:\Users\DELL LATITUDE\Desktop\Contact Tracing new\Contact Tracing V2\obj\Debug\Contact_Tracing_V2.Form4.resources

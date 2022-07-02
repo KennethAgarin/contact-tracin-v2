@@ -50,7 +50,12 @@ namespace Contact_Tracing_V2
             captureDevice.NewFrame += CaptureDevice_NewFrame;
             captureDevice.Start();
 
-           
+            MessageBox.Show("Scanned data has been saved");
+
+            StreamWriter file = new StreamWriter(@"C:\Users\DELL LATITUDE\Desktop\Contact Tracing new\contacttrace.txt", true);
+            file.WriteLine(QRcodetxtbx.Text);
+            file.WriteLine(" ");
+            file.Close();
         }
 
         private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)

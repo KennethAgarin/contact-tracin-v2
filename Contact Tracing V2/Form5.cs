@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QRCoder;
+using System.IO;
 
 namespace Contact_Tracing_V2
 {
@@ -17,7 +17,12 @@ namespace Contact_Tracing_V2
         public Form5()
         {
             InitializeComponent();
+
+            StreamReader reader = new StreamReader(@"C:\Users\DELL LATITUDE\Desktop\Contact Tracing new\qr.txt");
+            string data = reader.ReadToEnd();
+            QRcodetxtbx.Text = data.ToString();
         }
+
 
         private void generatebtn_Click(object sender, EventArgs e)
         {
@@ -25,6 +30,14 @@ namespace Contact_Tracing_V2
             var MyData = QR.CreateQrCode(QRcodetxtbx.Text, QRCodeGenerator.ECCLevel.H);
             var code = new QRCoder.QRCode(MyData);
             pbQRcode.Image = code.GetGraphic(5);
+
+            
+        }
+
+        private void QRcodetxtbx_TextChanged(object sender, EventArgs e)
+        {
+
+
 
         }
     }

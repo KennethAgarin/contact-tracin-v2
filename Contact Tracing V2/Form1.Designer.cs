@@ -62,6 +62,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Template = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Template)).BeginInit();
             this.SuspendLayout();
@@ -134,9 +135,9 @@
             this.restartbtn.ForeColor = System.Drawing.Color.Cornsilk;
             this.restartbtn.Location = new System.Drawing.Point(31, 426);
             this.restartbtn.Name = "restartbtn";
-            this.restartbtn.Size = new System.Drawing.Size(180, 37);
+            this.restartbtn.Size = new System.Drawing.Size(115, 37);
             this.restartbtn.TabIndex = 64;
-            this.restartbtn.Text = "Use QR Code";
+            this.restartbtn.Text = "Scan QR";
             this.restartbtn.UseVisualStyleBackColor = false;
             this.restartbtn.Click += new System.EventHandler(this.restartbtn_Click);
             // 
@@ -181,9 +182,9 @@
             this.buttonsubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonsubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonsubmit.ForeColor = System.Drawing.Color.Cornsilk;
-            this.buttonsubmit.Location = new System.Drawing.Point(217, 426);
+            this.buttonsubmit.Location = new System.Drawing.Point(292, 426);
             this.buttonsubmit.Name = "buttonsubmit";
-            this.buttonsubmit.Size = new System.Drawing.Size(192, 37);
+            this.buttonsubmit.Size = new System.Drawing.Size(117, 37);
             this.buttonsubmit.TabIndex = 60;
             this.buttonsubmit.Text = "Submit";
             this.buttonsubmit.UseVisualStyleBackColor = false;
@@ -333,6 +334,7 @@
             this.label5.Size = new System.Drawing.Size(72, 14);
             this.label5.TabIndex = 44;
             this.label5.Text = "First Name:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -403,11 +405,25 @@
             this.dateTimePicker1.TabIndex = 70;
             this.dateTimePicker1.Value = new System.DateTime(2022, 6, 29, 12, 46, 36, 0);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Cornsilk;
+            this.button1.Location = new System.Drawing.Point(152, 426);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 37);
+            this.button1.TabIndex = 71;
+            this.button1.Text = "Generate QR";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(441, 484);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.Adminbtn);
@@ -484,6 +500,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox Template;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

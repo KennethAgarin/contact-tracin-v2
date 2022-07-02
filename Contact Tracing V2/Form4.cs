@@ -82,8 +82,6 @@ namespace Contact_Tracing_V2
 
         private void generatebtn_Click(object sender, EventArgs e)
         {
-            Form5 form = new Form5();
-            form.ShowDialog();
 
         }
 

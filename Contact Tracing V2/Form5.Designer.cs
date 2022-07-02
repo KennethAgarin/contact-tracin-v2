@@ -43,6 +43,7 @@
             this.QRcodetxtbx.Name = "QRcodetxtbx";
             this.QRcodetxtbx.Size = new System.Drawing.Size(160, 151);
             this.QRcodetxtbx.TabIndex = 9;
+            this.QRcodetxtbx.TextChanged += new System.EventHandler(this.QRcodetxtbx_TextChanged);
             // 
             // generatebtn
             // 

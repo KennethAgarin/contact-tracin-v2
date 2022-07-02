@@ -36,7 +36,6 @@
             this.QRcodetxtbx = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.generatebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbQRcode)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +63,7 @@
             // scanbtn
             // 
             this.scanbtn.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scanbtn.Location = new System.Drawing.Point(315, 104);
+            this.scanbtn.Location = new System.Drawing.Point(315, 270);
             this.scanbtn.Name = "scanbtn";
             this.scanbtn.Size = new System.Drawing.Size(75, 23);
             this.scanbtn.TabIndex = 2;
@@ -82,7 +81,7 @@
             // 
             // QRcodetxtbx
             // 
-            this.QRcodetxtbx.Location = new System.Drawing.Point(315, 162);
+            this.QRcodetxtbx.Location = new System.Drawing.Point(315, 104);
             this.QRcodetxtbx.Multiline = true;
             this.QRcodetxtbx.Name = "QRcodetxtbx";
             this.QRcodetxtbx.Size = new System.Drawing.Size(160, 160);
@@ -104,24 +103,12 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // generatebtn
-            // 
-            this.generatebtn.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generatebtn.Location = new System.Drawing.Point(315, 133);
-            this.generatebtn.Name = "generatebtn";
-            this.generatebtn.Size = new System.Drawing.Size(75, 23);
-            this.generatebtn.TabIndex = 6;
-            this.generatebtn.Text = "Generate";
-            this.generatebtn.UseVisualStyleBackColor = true;
-            this.generatebtn.Click += new System.EventHandler(this.generatebtn_Click);
-            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(513, 394);
-            this.Controls.Add(this.generatebtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.QRcodetxtbx);
             this.Controls.Add(this.cbDevice);
@@ -147,6 +134,5 @@
         private System.Windows.Forms.TextBox QRcodetxtbx;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button generatebtn;
     }
 }

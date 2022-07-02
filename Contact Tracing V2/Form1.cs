@@ -70,5 +70,22 @@ namespace Contact_Tracing_V2
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Redirecting you on QR Code Generator");
+            StreamWriter QR = new StreamWriter(@"C:\Users\DELL LATITUDE\Desktop\Contact Tracing new\qr.txt", true);
+            QR.WriteLine("Date : " + dateTimePicker1.Text + " " + "Name: " + txtbox1stname.Text + " " + txtboxmi.Text + " " + txtboxsurname.Text + " " + "Address: " + txtboxstreet.Text + " " + txtboxbarangay.Text + " " + txtboxcity.Text + " " + "Contact: " + txtboxphonenum.Text + " " + txtboxemail.Text + " " + "Temperature: " + " " + txtboxtemp.Text);
+            QR.WriteLine(" ");
+            QR.Close();
+
+            Form5 form5 = new Form5();
+            form5.ShowDialog();
+        }
     }
 }

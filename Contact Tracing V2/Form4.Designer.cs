@@ -36,6 +36,7 @@
             this.QRcodetxtbx = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.readbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbQRcode)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,12 +104,24 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // readbtn
+            // 
+            this.readbtn.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.readbtn.Location = new System.Drawing.Point(396, 270);
+            this.readbtn.Name = "readbtn";
+            this.readbtn.Size = new System.Drawing.Size(75, 23);
+            this.readbtn.TabIndex = 6;
+            this.readbtn.Text = "Read";
+            this.readbtn.UseVisualStyleBackColor = true;
+            this.readbtn.Click += new System.EventHandler(this.readbtn_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(513, 394);
+            this.Controls.Add(this.readbtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.QRcodetxtbx);
             this.Controls.Add(this.cbDevice);
@@ -134,5 +147,6 @@
         private System.Windows.Forms.TextBox QRcodetxtbx;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button readbtn;
     }
 }
